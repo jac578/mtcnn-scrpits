@@ -1,0 +1,1 @@
+python detect_image_list.py 
