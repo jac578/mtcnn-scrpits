@@ -1,0 +1,27 @@
+{
+    "uri":"/workspace/data/__face_datasets__/MegaFace/identities_all/identities_5/15486718@N00_identity_80/face_3.jpg",
+    "code":0,
+    "message":"",
+    "result":{
+        "detections":
+        [
+            {
+                "index":1,"score":0.9998470544815064,"class":"face",
+                "pts":[[280,221],[536,221],[536,564],[280,564]]
+            },
+            {
+                "index":1,"score":0.9888758063316345,"class":"face",
+                "pts":[[60,13],[219,13],[219,244],[60,244]]
+            },
+            {
+                "index":1,"score":0.9608264565467835,"class":"face",
+                "pts":[[183,13],[344,13],[344,211],[183,211]]
+            },
+            {
+                "index":1,"score":0.7079774737358093,"class":"face",
+                "pts":
+                [[410,0],[624,0],[624,172],[410,172]]
+            }
+        ]
+        }
+    }
