@@ -98,6 +98,17 @@ def get_gt_rect(rect_fn):
     
     return rects
 
+def rename_with_folderName(str_path):
+    last_flag=str_path.rfind('/')
+    filename=str_path[last_flag+1:]
+    print 'filename',filename
+    temp=str_path[:last_flag]
+    flag=temp.rfind('/')
+    foldername=temp[flag+1:]
+    print foldername + "_" + filename
+    return foldername + "_" + filename
+
+
 
 def main(args):
     save_dir = args.save_dir
@@ -164,8 +175,8 @@ def main(args):
         print '%d\n' % count
 
         count = count + 1
-        img_fn = osp.join(img_root_dir, line)
-
+        # img_fn = osp.join(img_root_dir, line)
+        img_fn=line
         print('===> Processing img: ' + img_fn)
         img = cv2.imread(img_fn)
         ht = img.shape[0]
@@ -173,7 +184,7 @@ def main(args):
 
         print 'image.shape:', img.shape
 
-        rect_fn = osp.join(rect_root_dir, line[0:-4] + '.json')
+        rect_fn =  osp.join(rect_root_dir,rename_with_folderName(line) + '.json')  #osp.join(rect_root_dir,line[0:-4] + '.json')
         gt_rect = get_gt_rect(rect_fn)
         if gt_rect is None:
             print('Failed to get_gt_rect(), skip to next image')
